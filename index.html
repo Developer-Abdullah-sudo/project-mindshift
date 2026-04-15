@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Project Mindshift – Bridging quality gaps in learning resources for underprivileged students in Pakistan. 150+ students supported, PKR 60,000 raised."/>
+  <title>Project Mindshift – Bridging Quality Gaps in Learning Resources</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ===== PARTICLE CANVAS ===== -->
+<canvas id="particleCanvas"></canvas>
+
+<!-- ===== NAV ===== -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo" id="nav-logo-link">
+      <div class="logo-mark">
+        <img src="logo.jpeg" width="40" alt="logo">
+      </div>
+      <span class="logo-text">Project <strong>Mindshift</strong></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks" role="menubar">
+      <li role="none"><a href="#about"    role="menuitem">About</a></li>
+      <li role="none"><a href="#research" role="menuitem">Research</a></li>
+      <li role="none"><a href="#actions"  role="menuitem">Our Actions</a></li>
+      <li role="none"><a href="#impact"   role="menuitem">Impact</a></li>
+      <li role="none"><a href="#solutions"role="menuitem">Solutions</a></li>
+      <li role="none"><a href="#team"     role="menuitem">Team</a></li>
+      <li role="none"><a href="#gallery"  role="menuitem">Gallery</a></li>
+      <li role="none"><a href="#videos"   role="menuitem">Videos</a></li>
+      <li role="none"><a href="#blog"     role="menuitem">Blog</a></li>
+      <li role="none"><a href="#contact"  role="menuitem">Contact</a></li>
+      <li role="none"><a href="#docs" class="nav-cta" role="menuitem">Documents</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title reveal">
+      Project <span class="gradient-text">Mindshift</span>
+    </h1>
+    <p class="hero-tagline reveal">"Bridging Quality Gaps in Learning Resources"</p>
+    <p class="hero-desc reveal">
+      A student-led initiative dedicated to reducing educational inequity by distributing 
+      structured learning materials, conducting awareness seminars, and forging community 
+      partnerships — empowering underprivileged students across Pakistan.
+    </p>
+
+    <div class="stats-grid reveal">
+      <div class="stat-card" id="stat-1">
+        <span class="stat-num" data-target="150">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Students Supported</span>
+      </div>
+      <div class="stat-card" id="stat-2">
+        <span class="stat-num" data-target="150">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Kits Distributed</span>
+      </div>
+      <div class="stat-card" id="stat-3">
+        <span class="stat-num" data-target="60">0</span><span class="stat-plus">K</span>
+        <span class="stat-label">PKR Raised</span>
+      </div>
+      <div class="stat-card" id="stat-4">
+        <span class="stat-num" data-target="3">0</span>
+        <span class="stat-label">Seminars Conducted</span>
+      </div>
+    </div>
+
+    <div class="hero-cta reveal">
+      <a href="#actions" class="btn btn-primary" id="explore-work-btn">Explore Our Work</a>
+      <a href="#impact"  class="btn btn-outline" id="view-impact-btn">View Impact</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="orbit-ring ring-1"></div>
+    <div class="orbit-ring ring-2"></div>
+    <div class="orbit-ring ring-3"></div>
+    <div class="core-icon">
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+        <circle cx="40" cy="40" r="40" fill="url(#heroGrad)" opacity="0.15"/>
+        <path d="M26 54 C26 40 30 32 40 28 C50 32 54 40 54 54" stroke="url(#heroGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <line x1="40" y1="28" x2="40" y2="20" stroke="url(#heroGrad)" stroke-width="3" stroke-linecap="round"/>
+        <line x1="40" y1="20" x2="34" y2="26" stroke="url(#heroGrad)" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="40" y1="20" x2="46" y2="26" stroke="url(#heroGrad)" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="40" cy="58" r="4" fill="url(#heroGrad)"/>
+        <defs>
+          <linearGradient id="heroGrad" x1="0" y1="0" x2="80" y2="80">
+            <stop offset="0%" stop-color="#1a6cf6"/>
+            <stop offset="100%" stop-color="#06c8c8"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll to explore</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section about-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">About the Project</span>
+      <h2>Understanding <span class="gradient-text">Our Mission</span></h2>
+    </div>
+
+    <div class="about-cards">
+      <div class="about-card reveal" id="about-aim">
+        <div class="card-icon aim-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+            <circle cx="16" cy="16" r="8"  stroke="currentColor" stroke-width="2"/>
+            <circle cx="16" cy="16" r="3"  fill="currentColor"/>
+            <line x1="16" y1="2"  x2="16" y2="6"  stroke="currentColor" stroke-width="2"/>
+            <line x1="16" y1="26" x2="16" y2="30" stroke="currentColor" stroke-width="2"/>
+            <line x1="2"  y1="16" x2="6"  y2="16" stroke="currentColor" stroke-width="2"/>
+            <line x1="26" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>Our Aim</h3>
+        <p>Our aim to be corrected from the word "while": 
+
+While increasing students' access to quality learning resources through donations and kit distribution.</p>
+      </div>
+
+      <div class="about-card reveal" id="about-mission">
+        <div class="card-icon mission-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M4 28 L16 6 L28 28 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
+            <line x1="16" y1="14" x2="16" y2="22" stroke="currentColor" stroke-width="2"/>
+            <circle cx="16" cy="24.5" r="1.5" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Project outcome</h3>
+        <p>We conducted 3 teaching sessions, at CDG Wahdat Colony, Jeevanhana, Dar ul ilm CPC Care school. We created our own organization named Umeed-e-nau and raised PKR60k for donations to these underprivileged schools and donated at foundations like the alkhidmat Foundation. We also signed successful collaborations with the akhidmat foundation and Punjab Library Foundation along with 150+ resource kits distributed featuring stationery and books.</p>
+      </div>
+
+      <div class="about-card reveal problem-card" id="about-problem">
+        <div class="card-icon problem-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="4" y="8" width="24" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M10 8 V5 Q10 4 11 4 H21 Q22 4 22 5 V8" stroke="currentColor" stroke-width="2"/>
+            <line x1="10" y1="14" x2="22" y2="14" stroke="currentColor" stroke-width="2"/>
+            <line x1="10" y1="19" x2="18" y2="19" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>The Problem</h3>
+        <div class="problem-points">
+          <div class="problem-item">
+            <span class="problem-icon">📚</span>
+            <div>
+              <strong>Lack of Quality Resources</strong>
+              <p>Underprivileged students often lack access to updated textbooks, stationery, and meaningful educational materials, creating persistent learning disadvantages.</p>
+            </div>
+          </div>
+          <div class="problem-item">
+            <span class="problem-icon">📉</span>
+            <div>
+              <strong>Impact on Students</strong>
+              <p>Without structured materials, students fall behind, lose motivation, and are excluded from opportunities available to their more privileged peers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="global-context">
+          <p><strong>Why This Matters Globally and Locally:</strong> According to UNESCO, over 244 million children worldwide are still out of school, with educational inequality disproportionately affecting low-income communities. In Pakistan, millions of children lack access to even basic learning materials — a crisis that directly stunts economic mobility and perpetuates cycles of poverty. Project Mindshift addresses these gaps head-on, starting locally but aspiring to model scalable change.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESEARCH ===== -->
+<section id="research" class="section research-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Research & Key Findings</span>
+      <h2>What We <span class="gradient-text">Discovered</span></h2>
+      <p class="section-desc">Based on 200+ survey responses and in-depth community interviews, our research uncovered critical barriers to learning.</p>
+    </div>
+
+    <div class="findings-grid">
+      <div class="finding-card reveal" id="finding-1">
+        <div class="finding-number">01</div>
+        <div class="finding-body">
+          <h3>Quality Gaps in Resources</h3>
+          <p>Around <strong>80%</strong> of the students reported that one of the most significant barriers to their educational progress is the lack of access to high-quality learning resources, indicating that inadequate study materials, outdated content, and limited academic support are severely impacting their ability to learn effectively and achieve their full potential.</p>
+          <div class="finding-bar">
+            <div class="bar-label"><span>Poor quality materials</span><span>78%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="78"></div></div>
+          </div>
+          <div class="finding-bar">
+            <div class="bar-label"><span>Lacking core textbooks</span><span>65%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="65"></div></div>
+          </div>
+          <span class="source-tag">Source: Student Survey (n=200+)</span>
+        </div>
+      </div>
+
+      <div class="finding-card reveal" id="finding-2">
+        <div class="finding-number">02</div>
+        <div class="finding-body">
+          <h3>Learning Environment Impact</h3>
+          <p>Interviews revealed that <strong>71%</strong> of students studied in environments with poor lighting, overcrowded classrooms, or no dedicated study space — compounding the resource gap.</p>
+          <div class="finding-bar">
+            <div class="bar-label"><span>Poor study environment</span><span>71%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="71"></div></div>
+          </div>
+          <div class="finding-bar">
+            <div class="bar-label"><span>Overcrowded classrooms</span><span>58%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="58"></div></div>
+          </div>
+          <span class="source-tag">Source: Community Interviews</span>
+        </div>
+      </div>
+
+      <div class="finding-card reveal" id="finding-3">
+        <div class="finding-number">03</div>
+        <div class="finding-body">
+          <h3>Books as Primary Barrier</h3>
+          <p>Approximately <strong>83%</strong> of the students indicated that the main factors hindering their learning are the high cost and poor quality of available educational resources, particularly books, which are often either too expensive to afford or lack the depth, clarity, and updated content necessary for effective learning.</p>
+          <div class="finding-bar">
+            <div class="bar-label"><span>Cannot afford books</span><span>83%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="83"></div></div>
+          </div>
+          <div class="finding-bar">
+            <div class="bar-label"><span>Dropouts due to cost</span><span>42%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="42"></div></div>
+          </div>
+          <span class="source-tag">Source: Survey + Interviews</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-container reveal" id="chart-area">
+      <h3>Survey Response Overview</h3>
+      <div class="chart-wrapper">
+        <canvas id="surveyChart" width="700" height="300"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACTIONS ===== -->
+<section id="actions" class="section actions-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Core Section</span>
+      <h2>Our <span class="gradient-text">Actions</span></h2>
+      <p class="section-desc">From grassroots fundraising to structured teaching — here's what we actually did.</p>
+    </div>
+
+    <div class="actions-tabs">
+      <div class="tab-btns" role="tablist">
+        <button class="tab-btn active" role="tab" aria-selected="true"  data-tab="fundraising" id="tab-fundraising">💰 Fundraisers </button>
+        <button class="tab-btn"        role="tab" aria-selected="false" data-tab="awareness"   id="tab-awareness">📢 Awareness</button>
+        <button class="tab-btn"        role="tab" aria-selected="false" data-tab="distribution" id="tab-distribution">📦 Distribution</button>
+        <button class="tab-btn"        role="tab" aria-selected="false" data-tab="partnerships" id="tab-partnerships">🤝 Partnerships</button>
+        <button class="tab-btn"        role="tab" aria-selected="false" data-tab="umeed" id="tab-umeed">🤝 Umeed-e-Nau</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="panel-fundraising" role="tabpanel" aria-labelledby="tab-fundraising">
+          <div class="panel-grid">
+            <div class="panel-text">
+              <h3>Fundraising Initiative</h3>
+              <p>We were able to host a bake sale and via the raised funds we assembled 150+ kits donated to schools such and 60KPKR were given as funds as well to help schools improve their student learning resources.</p>
+              <ul class="action-list">
+                <li>🍰 Hosted by team Mindshift</li>
+                <li>💸 PKR 60K raised and directed towards schools</li>
+                <li>🎯 Funds used to create kits covering stationery, supplementary materials and books</li>
+              </ul>
+            </div>
+            <div class="panel-visual fundraising-visual">
+              <div class="visual-stat">
+                <span class="big-num">60K</span>
+                <span class="big-label">PKR Raised</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="panel-awareness" role="tabpanel" aria-labelledby="tab-awareness">
+          <div class="panel-grid">
+            <div class="panel-text">
+              <h3>Teaching Sessions</h3>
+              <p>We conducted <strong>3 structured teaching sessions</strong> to raise awareness about education inequity and provide students with direct academic support in core subjects.</p>
+              <ul class="action-list">
+                <li>🎤 3 teaching sessions on education rights and access</li>
+                <li>📖 Teaching sessions covering Maths, English, and Science</li>
+                <li>👥 Engaged 150+ students and community members</li>
+                <li>🌐 Raised awareness about global education inequity</li>
+              </ul>
+            </div>
+            <div class="panel-visual awareness-visual">
+              <div class="visual-stat">
+                <span class="big-num">3</span>
+                <span class="big-label">Teaching Sessions Held</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="panel-distribution" role="tabpanel" aria-labelledby="tab-distribution">
+          <div class="panel-grid">
+            <div class="panel-text">
+              <h3>Learning Kit Distribution</h3>
+              <p>Over <strong>150 learning kits</strong> were assembled and distributed to underprivileged students. Each kit was carefully curated to address identified learning needs.</p>
+              <ul class="action-list">
+                <li>📚 Core subject textbooks (curriculum-aligned)</li>
+                <li>✏️ Full stationery sets (pencils, pens, rulers, erasers)</li>
+                <li>📓 Notebooks and exercise books</li>
+                <li>🗂️ Supplementary reference guides</li>
+              </ul>
+            </div>
+            <div class="panel-visual distribution-visual">
+              <div class="visual-stat">
+                <span class="big-num">150+</span>
+                <span class="big-label">Kits Distributed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="panel-partnerships" role="tabpanel" aria-labelledby="tab-partnerships">
+          <div class="panel-grid">
+            <div class="panel-text">
+              <h3>Strategic Partnerships</h3>
+              <p>We formalized partnerships through Memoranda of Understanding (MoUs) with established organizations to ensure long-term sustainability and reach.</p>
+              <ul class="action-list">
+                <li>🤝 MoU signed with <strong>Alkhidmat & Punjab Library Foundation</strong></li>
+                <li>🏫 Collaboration with local school administrations</li>
+                <li>🌱 Community leader endorsements</li>
+                <li>🔗 Network building for future scale-up</li>
+                <li>📋 Formal documentation of all agreements</li>
+              </ul>
+            </div>
+            <div class="panel-visual partnerships-visual">
+              <div class="visual-stat">
+                <span class="big-num">MoU</span>
+                <span class="big-label">Signed with Alkhidmat & Punjab Library Foundation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="panel-umeed" role="tabpanel" aria-labelledby="tab-umeed">
+          <div class="panel-grid">
+            <div class="panel-text">
+              <p>
+                Umeed-e-Nau is a student-led initiative established as part of our project to address educational inequality by improving access to quality learning resources. It focuses on empowering underprivileged students through awareness, resource distribution, and collaborative efforts with institutions. By combining grassroots action with structured planning, the organization aims to create both immediate educational support and long-term, scalable impact.
+                Key features of Umeed-e-Nau:
+                Promotes access to quality learning resources through distribution drives (books, stationery, kits                                  Collaborates with organizations through MoUs to expand impact and sustainability
+                Organizes fundraisers (e.g., bake sales) to generate funds
+              </p>
+            </div>
+            <div class="panel-visual partnerships-visual">
+              <div class="visual-stat">
+                <span class="big-num">Umeed-e-Nau</span>
+                <span class="big-label">Our organization</span>
+                <img src="umeed.jpeg" width="200" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== IMPACT ===== -->
+<section id="impact" class="section impact-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Impact & Results</span>
+      <h2>Measuring Our <span class="gradient-text">Impact</span></h2>
+    </div>
+
+    <div class="impact-highlight reveal">
+      <div class="impact-big">
+        <span class="impact-pct">82%</span>
+        <span class="impact-desc">increase in student motivation following kit distribution and seminars</span>
+      </div>
+    </div>
+
+    <div class="before-after reveal">
+      <div class="ba-col before">
+        <div class="ba-label">Before</div>
+        <ul>
+          <li>❌ Limited or no learning materials</li>
+          <li>❌ Low morale and disengagement</li>
+          <li>❌ Irregular attendance patterns</li>
+          <li>❌ No structured academic support</li>
+        </ul>
+      </div>
+      <div class="ba-arrow">→</div>
+      <div class="ba-col after">
+        <div class="ba-label">After</div>
+        <ul>
+          <li>✅ 150+ kits with full materials</li>
+          <li>✅ 82% reported renewed motivation</li>
+          <li>✅ Increased classroom participation</li>
+          <li>✅ Structured seminar support provided</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quotes-row">
+      <div class="quote-card reveal" id="quote-1">
+        <div class="quote-mark">"</div>
+        <p>For the first time, I had proper books and a pencil that didn't break. I actually started looking forward to school.</p>
+        <span class="quote-author">— Student, Lahore (Age 12)</span>
+      </div>
+      <div class="quote-card reveal" id="quote-2">
+        <div class="quote-mark">"</div>
+        <p>The seminar made me understand what I was missing. The volunteers explained things better than I'd ever heard before.</p>
+        <span class="quote-author">— Student, Lahore (Age 14)</span>
+      </div>
+    </div>
+
+    <div class="evaluation-box reveal">
+      <div class="eval-icon">📊</div>
+      <div class="eval-text">
+        <h4>Project Evaluation</h4>
+        <p><strong>Short-term impact achieved, long-term impact requires scaling.</strong> While Project Mindshift successfully delivered measurable improvements in student motivation and resource access, sustaining and expanding this impact requires continued funding, policy advocacy, and broader institutional partnerships.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOLUTIONS ===== -->
+<section id="solutions" class="section solutions-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Policy Proposals</span>
+      <h2>Our Proposed <span class="gradient-text">Solutions</span></h2>
+      <p class="section-desc">Formal policy recommendations to address systemic educational inequity at scale.</p>
+    </div>
+
+    <div class="solutions-grid">
+      <div class="solution-card reveal" id="sol-1">
+        <div class="solution-num">I</div>
+        <h3>Standardisation of Learning Resources</h3>
+        <p>Government bodies should mandate uniform quality standards for educational materials distributed to public schools, ensuring that all students — regardless of socioeconomic background — receive equivalent resources.</p>
+        <div class="solution-tag">Regulation</div>
+      </div>
+      <div class="solution-card reveal" id="sol-2">
+        <div class="solution-num">II</div>
+        <h3>Teacher Involvement & Training</h3>
+        <p>Educators must be equipped with modern pedagogical tools and mandated to actively identify and support resource-deprived students. Teacher training programmes should include equity-focused frameworks.</p>
+        <div class="solution-tag">Education Reform</div>
+      </div>
+      <div class="solution-card reveal" id="sol-3">
+        <div class="solution-num">III</div>
+        <h3>Public-Private Partnerships</h3>
+        <p>Encourage structured collaboration between government institutions, NGOs, and the private sector to co-fund and co-implement sustainable educational resource programmes at national scale.</p>
+        <div class="solution-tag">Partnership</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEAM ===== -->
+<section id="team" class="section team-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Team & Roles</span>
+      <h2>The People Behind <span class="gradient-text">Mindshift</span></h2>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card leader reveal" id="team-leader">
+        <div class="team-avatar leader-avatar">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="18" r="10" fill="url(#av1)"/>
+            <path d="M6 44 C6 32 14 28 24 28 C34 28 42 32 42 44" fill="url(#av1)"/>
+            <defs><linearGradient id="av1" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#1a6cf6"/><stop offset="1" stop-color="#06c8c8"/></linearGradient></defs>
+          </svg>
+        </div>
+        <div class="leader-crown">👑 Team Leader</div>
+        <h3>Hassam</h3>
+        <p class="team-role">Project Lead & Coordinator</p>
+        <p class="team-desc">Hassam led project planning and structure; coordinated team roles to align with project objectives. Developed plans and secured partnerships, analyzing survey responses. </p>
+      </div>
+      <div class="team-card reveal" id="team-m1">
+        <div class="team-avatar">
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="18" r="10" fill="url(#av2)"/>
+            <path d="M6 44 C6 32 14 28 24 28 C34 28 42 32 42 44" fill="url(#av2)"/>
+            <defs><linearGradient id="av2" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs>
+          </svg>
+        </div>
+        <h3>Tayyab</h3>
+        <p class="team-desc">Tayyab handled website and social media; organized visual media for presentation. Maintained social media outreach. </p>
+      </div>
+
+      <div class="team-card reveal" id="team-m2">
+        <div class="team-avatar">
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="18" r="10" fill="url(#av3)"/>
+            <path d="M6 44 C6 32 14 28 24 28 C34 28 42 32 42 44" fill="url(#av3)"/>
+            <defs><linearGradient id="av3" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#ef4444"/></linearGradient></defs>
+          </svg>
+        </div>
+        <h3>Arshmaan</h3>
+        <p class="team-desc">Arshmaan handled video editing and supported data documentation. Supported layouts for sessions.</p>
+      </div>
+
+      <div class="team-card reveal" id="team-m3">
+        <div class="team-avatar">
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="18" r="10" fill="url(#av4)"/>
+            <path d="M6 44 C6 32 14 28 24 28 C34 28 42 32 42 44" fill="url(#av4)"/>
+            <defs><linearGradient id="av4" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#10b981"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs>
+          </svg>
+        </div>
+        <h3>Wassay</h3>
+        <p class="team-desc">Wassay assisted with primary research and survey collection. Assisting in survey data collection, along with logistical support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="section gallery-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Gallery & Media</span>
+      <h2>Evidence of <span class="gradient-text">Our Work</span></h2>
+      <p class="section-desc">Visual documentation of our seminars, kit distributions, and fundraising events.</p>
+    </div>
+
+    <div class="gallery-filter reveal">
+      <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+      <button class="filter-btn" data-filter="seminar"  id="filter-seminar">Seminars</button>
+      <button class="filter-btn" data-filter="teaching"  id="filter-teaching">Teaching Sessions</button>
+      <button class="filter-btn" data-filter="interview"  id="filter-interview">Interviews</button>
+      <button class="filter-btn" data-filter="kit"      id="filter-kit">Kit Distribution</button>
+      <button class="filter-btn" data-filter="fund"     id="filter-fund">Fundraising Initiatives</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item reveal" data-category="seminar" id="gal-1">
+        <div class="gallery-placeholder seminar-bg">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-2">
+        <div class="gallery-placeholder seminar-bg2">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-3">
+        <div class="gallery-placeholder seminar-bg3">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-4">
+        <div class="gallery-placeholder seminar-bg4">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-5">
+        <div class="gallery-placeholder seminar-bg5">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-6">
+        <div class="gallery-placeholder seminar-bg6">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-7">
+        <div class="gallery-placeholder seminar-bg7">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-8">
+        <div class="gallery-placeholder seminar-bg8">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-9">
+        <div class="gallery-placeholder seminar-bg9">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-10">
+        <div class="gallery-placeholder seminar-bg10">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-11">
+        <div class="gallery-placeholder seminar-bg11">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-12">
+        <div class="gallery-placeholder seminar-bg12">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-13">
+        <div class="gallery-placeholder seminar-bg13">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-14">
+        <div class="gallery-placeholder seminar-bg14">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-15">
+        <div class="gallery-placeholder seminar-bg15">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-16">
+        <div class="gallery-placeholder seminar-bg16">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-17">
+        <div class="gallery-placeholder seminar-bg17">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-18">
+        <div class="gallery-placeholder seminar-bg18">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="seminar" id="gal-19">
+        <div class="gallery-placeholder seminar-bg19">
+          <div class="gal-overlay">
+            <span class="gal-tag">Seminar</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="kit" id="gal-6">
+        <div class="gallery-placeholder kit-bg">
+          <div class="gal-overlay">
+            <span class="gal-icon">📦</span>
+            <p>Kit Distribution – Round 1</p>
+            <span class="gal-tag">Distribution</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="kit" id="gal-7">
+        <div class="gallery-placeholder kit-bg2">
+          <div class="gal-overlay">
+            <span class="gal-icon">📚</span>
+            <p>150+ Kits Ready for Delivery</p>
+            <span class="gal-tag">Distribution</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-category="bake" id="gal-8">
+        <div class="gallery-placeholder bake-bg">
+          <div class="gal-overlay">
+            <span class="gal-icon">🍰</span>
+            <p>Bake Sale – PKR 60K Raised</p>
+            <span class="gal-tag">Fundraising</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="gallery-note reveal">📸 Add your actual photos by replacing the gallery placeholders in the HTML/CSS. Upload images to an <code>images/</code> folder.</p>
+  </div>
+</section>
+
+<!-- ===== VIDEOS ===== -->
+<section id="videos" class="section videos-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">In Action</span>
+      <h2>Watch Our <span class="gradient-text">Shorts</span></h2>
+      <p class="section-desc">Behind-the-scenes clips from our teaching sessions, kit distributions, and fundraising events.</p>
+    </div>
+
+    <div class="videos-grid">
+      <!-- Video 1 -->
+      <div class="video-card reveal" id="vid-1">
+        <div class="video-wrap">
+          <iframe width="333" height="599" src="https://www.youtube.com/embed/iHKuIWCvtoE" title="Faisal ejaz vid" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe
+            src="https://www.youtube.com/embed/tbKIBWnGRns?rel=0&modestbranding=1"
+            title="Project Mindshift Short 1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">📹 Short</span>
+          <p>A glimpse into our work on the ground with students across Lahore.</p>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-card reveal" id="vid-2">
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/X31LpSdqjc0?rel=0&modestbranding=1"
+            title="Project Mindshift Short 2"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">📹 Short</span>
+          <p>Highlights from our learning kit distribution drive for underprivileged students.</p>
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="video-card reveal" id="vid-3">
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/X31LpSdqjc0?rel=0&modestbranding=1"
+            title="Project Mindshift Short 3"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">📹 Short</span>
+          <p>More from the field — capturing moments that show the real impact of Mindshift.</p>
+        </div>
+      </div>
+
+      <!-- Video 4 -->
+      <div class="video-card reveal" id="vid-4">
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/iHKuIWCvtoE?rel=0&modestbranding=1"
+            title="Project Mindshift Short 4"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">📹 Short</span>
+          <p>Our fundraising bake sale initiative that raised PKR 60K for student resources.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG ===== -->
+<section id="blog" class="section blog-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Blog & Reflections</span>
+      <h2>What We <span class="gradient-text">Learned</span></h2>
+    </div>
+
+    <div class="blog-grid">
+      <article class="blog-card reveal" id="blog-1">
+        <div class="blog-date">April 2025</div>
+        <span class="blog-cat">Reflection</span>
+        <h3>What We Learned from the Field</h3>
+        <p>Running Project Mindshift taught us that educational inequity is far more deeply rooted than resource gaps alone. Beyond books and stationery, students needed mentorship, belief, and consistency ...</p>
+        <a href="#" class="blog-read">Read More →</a>
+      </article>
+      <article class="blog-card reveal" id="blog-2">
+        <div class="blog-date">March 2025</div>
+        <span class="blog-cat">Challenges</span>
+        <h3>Challenges We Faced — and Overcame</h3>
+        <p>From securing funding with zero initial budget to navigating bureaucratic barriers in formal partnership agreements, our journey was anything but smooth. Here's how we adapted ...</p>
+        <a href="#" class="blog-read">Read More →</a>
+      </article>
+      <article class="blog-card reveal" id="blog-3">
+        <div class="blog-date">February 2025</div>
+        <span class="blog-cat">Research</span>
+        <h3>Insights from 200+ Survey Responses</h3>
+        <p>Our community survey revealed patterns we didn't anticipate. The data pointed to books as the #1 barrier — but behind that figure lie complex socioeconomic stories that statistics alone can't capture ...</p>
+        <a href="#" class="blog-read">Read More →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Get Involved</span>
+      <h2>Contact &amp; <span class="gradient-text">Partner With Us</span></h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Reach Out</h3>
+        <div class="contact-item" id="contact-email">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:muhhamdhassam@gmail.com">muhhamdhassam@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item" id="contact-instagram">
+          <span class="contact-icon">📷</span>
+          <div>
+            <strong>Instagram</strong>
+            <a href="https://instagram.com/projectmindshift_" target="_blank" rel="noopener">@projectmindshift_</a>
+          </div>
+        </div>
+        <div class="contact-item" id="contact-org">
+          <span class="contact-icon">🏢</span>
+          <div>
+            <strong>Organisation</strong>
+            <span>Umeed-e-Nau, Pakistan</span>
+          </div>
+        </div>
+
+        <div class="partner-box">
+          <h4>🤝 Partner With Us</h4>
+          <p>We are actively seeking NGO partners, educational institutions, and corporate sponsors to help us scale our impact across Pakistan. Reach out to discuss MoU opportunities.</p>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="cf-name">Your Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Full Name" required/>
+        </div>
+        <div class="form-group">
+          <label for="cf-email">Email Address</label>
+          <input type="email" id="cf-email" name="email" placeholder="you@example.com" required/>
+        </div>
+        <div class="form-group">
+          <label for="cf-org">Organisation (Optional)</label>
+          <input type="text" id="cf-org" name="organisation" placeholder="Your organisation or school"/>
+        </div>
+        <div class="form-group">
+          <label for="cf-msg">Message</label>
+          <textarea id="cf-msg" name="message" rows="5" placeholder="How would you like to get involved?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width" id="contact-submit-btn">Send Message</button>
+        <div class="form-success" id="formSuccess">✅ Thank you! We'll be in touch soon.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DOCUMENTS ===== -->
+<section id="docs" class="section docs-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Downloads</span>
+      <h2>Project <span class="gradient-text">Documents</span></h2>
+      <p class="section-desc">Access our research, reports, and policy proposals — all in one place.</p>
+    </div>
+
+    <div class="docs-grid">
+      <div class="doc-card reveal" id="doc-1">
+        <div class="doc-icon">📄</div>
+        <div class="doc-info">
+          <h4>Full Project Report</h4>
+          <p>Comprehensive report covering aims, methodology, findings, actions, and evaluation.</p>
+          <span class="doc-type">PDF</span>
+        </div>
+        <a href="documents/project-report.pdf" class="doc-download" id="download-report" download>⬇ Download</a>
+      </div>
+      <div class="doc-card reveal" id="doc-2">
+        <div class="doc-icon">📊</div>
+        <div class="doc-info">
+          <h4>Survey Summary</h4>
+          <p>Key statistics and findings from our 200+ response community survey.</p>
+          <span class="doc-type">PDF</span>
+        </div>
+        <a href="documents/survey-summary.pdf" class="doc-download" id="download-survey" download>⬇ Download</a>
+      </div>
+      <div class="doc-card reveal" id="doc-3">
+        <div class="doc-icon">📋</div>
+        <div class="doc-info">
+          <h4>Policy Proposal</h4>
+          <p>Formal policy recommendations for standardising educational resources at national level.</p>
+          <span class="doc-type">PDF</span>
+        </div>
+        <a href="documents/policy-proposal.pdf" class="doc-download" id="download-policy" download>⬇ Download</a>
+      </div>
+    </div>
+    <p class="docs-note reveal">💡 Place your PDF files in a <code>documents/</code> folder in the project directory to enable direct downloads.</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#home" class="nav-logo">
+        <div class="logo-mark">
+          <svg width="30" height="30" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="18" fill="url(#footGrad)"/>
+            <path d="M12 24 C12 18 14 14 18 12 C22 14 24 18 24 24" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <line x1="18" y1="12" x2="18" y2="8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="18" y1="8" x2="15" y2="11" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="18" y1="8" x2="21" y2="11" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            <defs><linearGradient id="footGrad" x1="0" y1="0" x2="36" y2="36"><stop offset="0%" stop-color="#1a6cf6"/><stop offset="100%" stop-color="#06c8c8"/></linearGradient></defs>
+          </svg>
+        </div>
+        <span class="logo-text">Project <strong>Mindshift</strong></span>
+      </a>
+      <p>Bridging Quality Gaps in Learning Resources.<br/>An Umeed-e-Nau Initiative.</p>
+    </div>
+    <div class="footer-links">
+      <h5>Navigate</h5>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#actions">Actions</a>
+      <a href="#impact">Impact</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#docs">Documents</a>
+    </div>
+    <div class="footer-links">
+      <h5>Connect</h5>
+      <a href="mailto:projectmindshift@gmail.com">Email Us</a>
+      <a href="https://instagram.com/projectmindshift" target="_blank" rel="noopener">Instagram</a>
+      <a href="#contact">Partner With Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Project Mindshift · All Rights Reserved</p>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="app.js"></script>
+</body>
+</html>
